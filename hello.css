@@ -1,0 +1,38 @@
+body{
+    font-size: 25px;
+}
+
+form input{
+    background-color: #eee;
+    border: none;
+    width: 185px;
+    padding: 15px auto;
+    display: block;
+}
+
+form label{
+    font-weight: bold;
+}
+
+form div.group{
+    margin-bottom: 15px;
+}
+
+form div.invalid-text{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    display: none;
+}
+form div.invalid-text::before{
+    content: "* ";
+}
+
+form button{
+    background-color: seagreen;
+    color: #fff;
+    padding: 10px;
+    width: 85px;
+    border-radius: 5px;
+    border: none;
+}
