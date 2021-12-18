@@ -4,7 +4,7 @@ const submitHandler = (event) => {
     let inputs = document.querySelectorAll("input");
 
     inputs.forEach(input => {
-        let errors = validateField(input);
+        validateField(input);
     })
 }
 
@@ -12,7 +12,7 @@ const validateField = (input) => {
     const { value } = input;
     let errors = [];
 
-    if(!value | value < 1){
+    if(!value || value.length < 1){
         errors.push('chan sa obligatwa');
     }
 
@@ -28,7 +28,7 @@ const validateField = (input) => {
 }
 
 const updateFieldHandler = (event) => {
-    let errors = validateField(event.target)
+    validateField(event.target)
 }
 
 document.getElementById('form').addEventListener('submit', submitHandler);
